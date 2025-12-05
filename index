@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Developer Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"/>
+
+    <style>
+        * { font-family: "Itim", serif; }
+
+        /* Background GIF */
+        body {
+            background: url("https://i.pinimg.com/originals/27/1f/9e/271f9e3efbc58dbb075903c7096ba99c.gif")
+                        no-repeat center center fixed;
+            background-size: cover;
+            cursor: url("https://cdn.discordapp.com/attachments/997325119250772049/1446469101349245010/fa915a08-b82c-42f5-bc4e-0df1cf97fde4.png?ex=693418d3&is=6932c753&hm=54b7243a9fde5ac0dc0927ed8a9c989db6637bfdc122ca582b2182ebdaae7702") 16 16, auto;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-slideIn { animation: slideIn 0.6s ease forwards; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+
+        /* Logos */
+        .logo {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            transition: 0.25s;
+        }
+        .logo-lg {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+        }
+
+        .logo:hover {
+            transform: scale(1.12);
+            filter: brightness(1.2);
+        }
+
+        .icon-wrap {
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .glitch-text {
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 red;
+    animation: glitch 2s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+    left: -2px;
+    text-shadow: -2px 0 blue;
+    animation: glitch 2s infinite linear;
+}
+
+@keyframes glitch {
+    0% { clip-path: inset(0 0 90% 0); }
+    20% { clip-path: inset(10% 0 60% 0); }
+    40% { clip-path: inset(40% 0 35% 0); }
+    60% { clip-path: inset(80% 0 5% 0); }
+    80% { clip-path: inset(50% 0 30% 0); }
+    100% { clip-path: inset(0 0 90% 0); }
+}
+
+        a:focus { outline: 2px solid rgba(99,102,241,0.6); }
+    </style>
+</head>
+
+<body class="text-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <!-- Hidden autoplay music -->
+    <audio autoplay loop hidden>
+        <source src="https://files.catbox.moe/1arsea.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="container max-w-3xl mx-auto">
+
+        <div class="bg-[#00000080] backdrop-blur-md rounded-xl p-4 md:p-8 shadow-2xl border border-[#334155]">
+
+            <!-- Profile -->
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6 mb-8">
+                <div class="w-32 h-32 md:w-40 md:h-40 overflow-hidden rounded-full border-4 border-blue-400">
+                    <img src="https://r2.guns.lol/4df8ee08-93e1-4450-bd6d-cc67552212cd.webp" class="w-full h-full object-cover"/>
+                </div>
+
+                <div class="flex-1 text-center md:text-left">
+                    <h1 class="text-3xl md:text-4xl font-bold text-blue-400 animate-slideIn">
+                        SoulzRipperX
+                    </h1>
+                    <p class="text-gray-300 animate-slideIn">Return By Death</p>
+
+                    <div class="space-y-2 text-gray-300 mt-3">
+                        <p><i class="ri-map-pin-line mr-2"></i>Japan</p>
+                        <p><i class="ri-building-line mr-2"></i>Azure 桜 Studios</p>
+                        <p><i class="ri-book-line mr-2"></i>Computer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <div class="text-center mb-10 animate-float">
+                <div class="text-center mb-10 animate-float">
+                    <h1 class="text-4xl font-mono relative glitch-text" data-text="Guild Master">Guild Master
+                    </h1>
+                </div>
+
+                <h1 class="text-3xl font-mono">
+                    <span class="text-yellow-400">Games</span>
+                    <span class="text-blue-400">Developer</span>
+                </h1>
+            </div>
+            
+            <!-- Music Player -->
+<div class="music-player">
+    <img class="music-cover" src="https://cdn.discordapp.com/attachments/997325119250772049/1446471335181160499/natori-Friday-night.jpg?ex=69341ae8&is=6932c968&hm=fe2b6b16d1d45848e64aed7efba75274a174b0b93c07934b46a5630fd8a26b15" alt="cover">
+
+    <div class="music-info">
+        <div class="music-title">なとり - フライデー・ナイト</div>
+        <div class="music-time">
+            <span id="currentTime">0:00</span>
+            <div class="progress-container" id="progressContainer">
+                <div class="progress" id="progress"></div>
+            </div>
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+
+    <button id="playBtn" class="music-btn">⏸</button>
+
+    <audio id="audio" autoplay loop muted>
+        <source src="https://files.catbox.moe/1arsea.mp3" type="audio/mp3">
+    </audio>
+</div>
+
+<style>
+.music-player {
+    width: 520px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    padding: 12px 18px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.music-cover {
+    width: 58px;
+    height: 58px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.music-info {
+    flex: 1;
+    color: white;
+    font-family: sans-serif;
+}
+
+.music-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.music-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.progress-container {
+    width: 240px;
+    height: 4px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: white;
+    border-radius: 2px;
+}
+
+.music-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("playBtn");
+const progress = document.getElementById("progress");
+const progressContainer = document.getElementById("progressContainer");
+const currentTimeEl = document.getElementById("currentTime");
+const durationEl = document.getElementById("duration");
+
+audio.addEventListener("loadedmetadata", () => {
+    durationEl.textContent = formatTime(audio.duration);
+});
+
+audio.addEventListener("timeupdate", () => {
+    progress.style.width = (audio.currentTime / audio.duration) * 100 + "%";
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+});
+
+progressContainer.addEventListener("click", (e) => {
+    const width = progressContainer.clientWidth;
+    const clickX = e.offsetX;
+    audio.currentTime = (clickX / width) * audio.duration;
+});
+
+playBtn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.muted = false;
+        audio.play();
+        playBtn.textContent = "⏸";
+    } else {
+        audio.pause();
+        playBtn.textContent = "▶";
+    }
+});
+
+
+function formatTime(sec) {
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60).toString().padStart(2, '0');
+    return `${m}:${s}`;
+}
+</script>
+
+
+            <!-- Contact Icons -->
+            <div class="flex justify-center space-x-6 mt-8 mb-10">
+                <a href="https://github.com/SoulzRipperX" target="_blank" class="contact-link text-3xl hover:text-blue-400">
+                    <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://www.facebook.com/SoulzRipperX/" target="_blank" class="contact-link text-3xl hover:text-green-400">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/soulv845/" target="_blank" class="contact-link text-3xl hover:text-red-400">
+                    <i class="ri-instagram-fill"></i>
+                </a>
+            </div>
+
+            <!-- ===================== SKILLS SECTION ===================== -->
+            <h2 class="text-xl font-mono text-yellow-300 mb-4">Skills</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+
+                <div class="bg-[#0F172A] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg">
+                    </div>
+                    <p class="mt-2">HTML5</p>
+                </div>
+
+                <div class="bg-[#0F172A] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg">
+                    </div>
+                    <p class="mt-2">CSS3</p>
+                </div>
+
+                <div class="bg-[#0F172A] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
+                    </div>
+                    <p class="mt-2">JavaScript</p>
+                </div>
+
+                <div class="bg-[#0F172A] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
+                    </div>
+                    <p class="mt-2">Python</p>
+                </div>
+
+                <div class="bg-[#0F172A] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Lua-Logo.svg">
+                    </div>
+                    <p class="mt-2">Lua</p>
+                </div>
+
+                <div class="bg-[#0F172A] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://raw.githubusercontent.com/gist/johndward01/95c1d09de9e3707cfb4154989962376d/raw/f74007782421219d9e9ab4b6a27de2e172a8b714/csharp-logo.svg">
+                    </div>
+                    <p class="mt-2">C#</p>
+                </div>
+
+                <div class="bg-[#0F172A] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg">
+                    </div>
+                    <p class="mt-2">C++</p>
+                </div>
+
+                <div class="bg-[#0F172A] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg">
+                    </div>
+                    <p class="mt-2">SQL</p>
+                </div>
+
+            </div>
+
+            <!-- ===================== TOOLS SECTION ===================== -->
+            <h2 class="text-xl font-mono text-yellow-300 mb-4">Tools & Technologies</h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+
+                <div class="bg-[#1E293B] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg">
+                    </div>
+                    <p class="mt-2 text-xs">React</p>
+                </div>
+
+                <div class="bg-[#1E293B] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg">
+                    </div>
+                    <p class="mt-2 text-xs">MongoDB</p>
+                </div>
+
+                <div class="bg-[#1E293B] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_640.png">
+                    </div>
+                    <p class="mt-2 text-xs">GitHub</p>
+                </div>
+
+                <div class="bg-[#1E293B] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Windows_Terminal_logo.svg">
+                    </div>
+                    <p class="mt-2 text-xs">Terminal</p>
+                </div>
+
+                <div class="bg-[#1E293B] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg">
+                    </div>
+                    <p class="mt-2 text-xs">VS Code</p>
+                </div>
+
+                <div class="bg-[#1E293B] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg">
+                    </div>
+                    <p class="mt-2 text-xs">Git</p>
+                </div>
+
+                <div class="bg-[#1E293B] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Roblox_Studio_logo_-_2022.svg">
+                    </div>
+                    <p class="mt-2 text-xs">Roblox Studio</p>
+                </div>
+
+                <div class="bg-[#1E293B] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo" src="https://upload.vectorlogo.zone/logos/unity3d/images/562cc0fa-a6c4-45a3-8412-ef8bce616751.svg">
+                    </div>
+                    <p class="mt-2 text-xs">Unity</p>
+                </div>
+
+                <div class="bg-[#1E293B] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo-lg logo" src="https://www.svgrepo.com/show/342328/unreal-engine.svg">
+                    </div>
+                    <p class="mt-2 text-xs">Unreal Engine</p>
+                </div>
+
+                <div class="bg-[#1E293B] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo-lg logo" src="https://cdn.prod.website-files.com/5efc0159f9a97ba05a8b2902/65b8b3ed67da93688b2de8d6_header-icon-1-56x56.png">
+                    </div>
+                    <p class="mt-2 text-xs">RPG Maker</p>
+                </div>
+
+                <div class="bg-[#1E293B] p-4 rounded-lg text-center">
+                    <div class="icon-wrap">
+                        <img class="logo-lg logo" src="https://cdn.brandfetch.io/idLXVOChpM/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1758843467180">
+                    </div>
+                    <p class="mt-2 text-xs">GameMaker</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
